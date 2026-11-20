@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: faq.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Perguntas frequentes sobre o aluguel de veículos na DuoDrive
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perguntas frequentes sobre o aluguel de veículos na DuoDrive">
+    <title>Perguntas frequentes | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span>DuoDrive</span>
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="sub">
+                        <a href="frota.html">Frota</a>
+                        <ul class="submenu">
+                            <li><a href="frota.html">Todos os veículos</a></li>
+                            <li><a href="eletricos.html">Elétricos</a></li>
+                            <li><a href="gasolina.html">Gasolina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="sub">
+                        <a href="sobre.html" class="ativo">Mais</a>
+                        <ul class="submenu">
+                            <li><a href="sobre.html">Sobre nós</a></li>
+                            <li><a href="midia.html">Mídia</a></li>
+                            <li><a href="faq.html" class="ativo">Perguntas frequentes</a></li>
+                            <li><a href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                            <li><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            <li><a href="https://github.com/Baliski/DUO" target="_blank" rel="noopener noreferrer">GitHub (projeto)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="conteiner">
+            <section class="secao">
+                <h1>Perguntas frequentes</h1>
+                <p>Clique em uma pergunta para ver a resposta.</p>
+                <button class="botao botao-contorno" type="button" id="alternar-todas" data-estado="fechadas">Expandir todas</button>
+            </section>
+            <section class="secao" style="padding-top: 0;">
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Posso alugar um elétrico sem ter carregador em casa?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Sim. Você pode recarregar em eletropostos públicos durante a viagem. Entregamos o veículo com a bateria carregada e o cabo de recarga incluso.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Quanto tempo leva para recarregar?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Em carregadores rápidos, cerca de 40 minutos para chegar a 80% da bateria. Em tomadas comuns, de 8 a 10 horas.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Como funciona o abastecimento dos carros a gasolina?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Você retira o carro com o tanque cheio e devolve com o tanque no mesmo nível, abastecendo em qualquer posto.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Quais documentos preciso para alugar?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Carteira de habilitação válida há pelo menos dois anos, documento de identidade e cartão de crédito para a caução. A idade mínima é de 21 anos.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Como cancelo uma reserva?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Na página Reservar, localize a reserva na tabela Minhas reservas e clique em Cancelar.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">Onde ficam salvos os dados da minha reserva?</button>
+                    <div class="faq-resposta" hidden>
+                        <p>Neste navegador, usando o localStorage. Nenhum dado é enviado para servidores, pois o site é um projeto acadêmico.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

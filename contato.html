@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: contato.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Formulário de contato da DuoDrive
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de contato da DuoDrive">
+    <title>Contato | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span>DuoDrive</span>
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="sub">
+                        <a href="frota.html">Frota</a>
+                        <ul class="submenu">
+                            <li><a href="frota.html">Todos os veículos</a></li>
+                            <li><a href="eletricos.html">Elétricos</a></li>
+                            <li><a href="gasolina.html">Gasolina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html" class="ativo">Contato</a></li>
+                    <li class="sub">
+                        <a href="sobre.html">Mais</a>
+                        <ul class="submenu">
+                            <li><a href="sobre.html">Sobre nós</a></li>
+                            <li><a href="midia.html">Mídia</a></li>
+                            <li><a href="faq.html">Perguntas frequentes</a></li>
+                            <li><a href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                            <li><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            <li><a href="https://github.com/Baliski/DUO" target="_blank" rel="noopener noreferrer">GitHub (projeto)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="conteiner">
+            <section class="secao contato-grade">
+                <form id="form-contato" class="formulario">
+                    <h1>Fale com a gente</h1>
+                    <div class="grupo">
+                        <label for="nome">Nome completo</label>
+                        <input class="campo" type="text" id="nome" name="nome" placeholder="Ex.: Maria da Silva" required minlength="3" pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]{3,}" title="Use apenas letras, com no mínimo 3 caracteres">
+                    </div>
+                    <div class="grupo">
+                        <label for="email">E-mail</label>
+                        <input class="campo" type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="assunto">Assunto</label>
+                        <select class="campo" id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="Dúvida sobre elétricos">Dúvida sobre elétricos</option>
+                            <option value="Dúvida sobre veículos a gasolina">Dúvida sobre veículos a gasolina</option>
+                            <option value="Reserva e pagamento">Reserva e pagamento</option>
+                            <option value="Sugestão ou elogio">Sugestão ou elogio</option>
+                        </select>
+                    </div>
+                    <div class="grupo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea class="campo" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem, com no mínimo 10 caracteres" required minlength="10" maxlength="300"></textarea>
+                        <small id="contador-caracteres">0/300</small>
+                    </div>
+                    <button class="botao" type="submit">Enviar mensagem</button>
+                    <p id="retorno" class="aviso" role="status"></p>
+                </form>
+                <aside class="informacoes">
+                    <h2>Onde estamos</h2>
+                    <address>
+                        Rua das Palmeiras, 1000<br>
+                        Curitiba, Paraná<br>
+                        (41) 4000-0000<br>
+                        contato@duodrive.example
+                    </address>
+                    <h3>Atendimento</h3>
+                    <p>Segunda a sexta, das 8h às 18h. Sábados, das 9h às 13h.</p>
+                </aside>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/contato.js"></script>
+</body>
+</html>

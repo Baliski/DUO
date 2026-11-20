@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: gasolina.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Carros a gasolina para alugar na DuoDrive
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carros a gasolina para alugar na DuoDrive">
+    <title>Gasolina | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-tipo="gasolina">
+    <header class="cabecalho">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="img/logo.svg" alt="" width="40" height="40">
+                    <span>DuoDrive</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-bs" aria-controls="menu-bs" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-bs">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Frota</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="frota.html">Todos os veículos</a></li>
+                                <li><a class="dropdown-item" href="eletricos.html">Elétricos</a></li>
+                                <li><a class="dropdown-item active" href="gasolina.html">Gasolina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="simulador.html">Simulador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sobre.html">Sobre nós</a></li>
+                                <li><a class="dropdown-item" href="midia.html">Mídia</a></li>
+                                <li><a class="dropdown-item" href="faq.html">Perguntas frequentes</a></li>
+                                <li><a class="dropdown-item" href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                                <li><a class="dropdown-item" href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-5">
+            <h1 class="mb-2">Carros a gasolina para alugar</h1>
+            <p class="lead">Modelos Classic com muita autonomia e abastecimento em qualquer posto.</p>
+            <div class="alert alert-gasolina" role="alert">
+                <strong>Dica de viagem:</strong> devolva o veículo com o tanque no mesmo nível da retirada. Acompanhe os preços dos combustíveis no site da <a class="alert-link" href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP</a>.
+            </div>
+            <p id="contador" class="text-secondary" aria-live="polite"></p>
+            <div class="row g-4" id="lista-frota"></div>
+            <section class="mt-5">
+                <h2>Como funciona o abastecimento</h2>
+                <ol>
+                    <li>Retire o veículo com o tanque cheio.</li>
+                    <li>Abasteça em qualquer posto durante a viagem.</li>
+                    <li>Devolva com o tanque no mesmo nível, sem taxa de reposição.</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dados.js"></script>
+    <script src="js/frota.js"></script>
+</body>
+</html>

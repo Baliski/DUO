@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: midia.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Vídeo, áudio e galeria de imagens da frota DuoDrive
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vídeo, áudio e galeria de imagens da frota DuoDrive">
+    <title>Mídia | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span>DuoDrive</span>
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="sub">
+                        <a href="frota.html">Frota</a>
+                        <ul class="submenu">
+                            <li><a href="frota.html">Todos os veículos</a></li>
+                            <li><a href="eletricos.html">Elétricos</a></li>
+                            <li><a href="gasolina.html">Gasolina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="sub">
+                        <a href="sobre.html" class="ativo">Mais</a>
+                        <ul class="submenu">
+                            <li><a href="sobre.html">Sobre nós</a></li>
+                            <li><a href="midia.html" class="ativo">Mídia</a></li>
+                            <li><a href="faq.html">Perguntas frequentes</a></li>
+                            <li><a href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                            <li><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            <li><a href="https://github.com/Baliski/DUO" target="_blank" rel="noopener noreferrer">GitHub (projeto)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="conteiner">
+            <section class="secao">
+                <h1>Mídia</h1>
+                <figure class="player">
+                    <video controls preload="metadata" poster="img/poster.jpg" width="854" height="480">
+                        <source src="video/como-alugar.mp4" type="video/mp4">
+                        <source src="video/como-alugar.webm" type="video/webm">
+                        Seu navegador não suporta vídeo HTML5.
+                    </video>
+                    <figcaption>Vídeo: como alugar um veículo na DuoDrive em quatro passos.</figcaption>
+                </figure>
+                <figure class="player">
+                    <audio controls preload="none">
+                        <source src="audio/vinheta.mp3" type="audio/mpeg">
+                        Seu navegador não suporta áudio HTML5.
+                    </audio>
+                    <figcaption>Áudio: vinheta sonora da DuoDrive.</figcaption>
+                </figure>
+            </section>
+            <section class="secao">
+                <h2>Galeria da frota</h2>
+                <div class="galeria">
+                    <figure class="eletrico">
+                        <img src="img/volt-mini.svg" alt="Hatch elétrico Volt Mini">
+                        <figcaption>Volt Mini</figcaption>
+                    </figure>
+                    <figure class="eletrico">
+                        <img src="img/volt-sedan.svg" alt="Sedan elétrico Volt Sedan">
+                        <figcaption>Volt Sedan</figcaption>
+                    </figure>
+                    <figure class="eletrico">
+                        <img src="img/volt-suv.svg" alt="SUV elétrico Volt SUV">
+                        <figcaption>Volt SUV</figcaption>
+                    </figure>
+                    <figure class="eletrico">
+                        <img src="img/volt-cargo.svg" alt="Picape elétrica Volt Cargo">
+                        <figcaption>Volt Cargo</figcaption>
+                    </figure>
+                    <figure class="gasolina">
+                        <img src="img/classic-mini.svg" alt="Hatch a gasolina Classic Mini">
+                        <figcaption>Classic Mini</figcaption>
+                    </figure>
+                    <figure class="gasolina">
+                        <img src="img/classic-sedan.svg" alt="Sedan a gasolina Classic Sedan">
+                        <figcaption>Classic Sedan</figcaption>
+                    </figure>
+                    <figure class="gasolina">
+                        <img src="img/classic-suv.svg" alt="SUV a gasolina Classic SUV">
+                        <figcaption>Classic SUV</figcaption>
+                    </figure>
+                    <figure class="gasolina">
+                        <img src="img/classic-picape.svg" alt="Picape a gasolina Classic Picape">
+                        <figcaption>Classic Picape</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

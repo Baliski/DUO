@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: index.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Página inicial da DuoDrive, locadora de veículos elétricos e a gasolina
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial da DuoDrive, locadora de veículos elétricos e a gasolina">
+    <title>Início | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span>DuoDrive</span>
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li class="sub">
+                        <a href="frota.html">Frota</a>
+                        <ul class="submenu">
+                            <li><a href="frota.html">Todos os veículos</a></li>
+                            <li><a href="eletricos.html">Elétricos</a></li>
+                            <li><a href="gasolina.html">Gasolina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="sub">
+                        <a href="sobre.html">Mais</a>
+                        <ul class="submenu">
+                            <li><a href="sobre.html">Sobre nós</a></li>
+                            <li><a href="midia.html">Mídia</a></li>
+                            <li><a href="faq.html">Perguntas frequentes</a></li>
+                            <li><a href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                            <li><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            <li><a href="https://github.com/Baliski/DUO" target="_blank" rel="noopener noreferrer">GitHub (projeto)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="conteiner hero-grade">
+                <div>
+                    <h1>Elétrico ou gasolina, você escolhe o carro da viagem</h1>
+                    <p style="font-size: 1.2rem;">Compare os modelos, simule o valor do aluguel e reserve em poucos cliques.</p>
+                    <div class="acoes">
+                        <a class="botao" href="frota.html">Ver a frota</a>
+                        <a class="botao botao-contorno" href="simulador.html">Simular preço</a>
+                    </div>
+                </div>
+                <img src="img/hero.svg" alt="Dois carros lado a lado: um elétrico sobre fundo verde e um a gasolina sobre fundo laranja" width="600" height="300">
+            </div>
+        </section>
+        <div class="conteiner">
+            <section class="secao">
+                <h2>Qual tipo de veículo combina com você?</h2>
+                <div class="cartoes">
+                    <article class="cartao eletrico">
+                        <img src="img/volt-suv.svg" alt="SUV elétrico na cor verde">
+                        <div class="corpo">
+                            <h3>Elétricos Volt</h3>
+                            <p>Direção silenciosa, zero emissão local e custo por quilômetro bem menor. Ótimos para a cidade e para viagens planejadas.</p>
+                            <a class="botao" href="eletricos.html">Conhecer os elétricos</a>
+                        </div>
+                    </article>
+                    <article class="cartao gasolina">
+                        <img src="img/classic-sedan.svg" alt="Sedan a gasolina na cor laranja">
+                        <div class="corpo">
+                            <h3>Gasolina Classic</h3>
+                            <p>Muita autonomia, abastecimento em poucos minutos e liberdade para pegar a estrada sem pensar em pontos de recarga.</p>
+                            <a class="botao botao-gasolina" href="gasolina.html">Conhecer os modelos</a>
+                        </div>
+                    </article>
+                    <article class="cartao">
+                        <img src="img/classic-picape.svg" alt="Picape na cor laranja escura">
+                        <div class="corpo">
+                            <h3>Picapes e utilitários</h3>
+                            <p>Espaço para carga e equipe de trabalho, nas versões elétrica e a gasolina.</p>
+                            <a class="botao botao-contorno" href="frota.html">Ver toda a frota</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="secao">
+                <h2>Por que alugar na DuoDrive</h2>
+                <div class="beneficios">
+                    <article class="beneficio">
+                        <h3>Retirada rápida</h3>
+                        <p>Reserve online e retire o veículo sem filas.</p>
+                    </article>
+                    <article class="beneficio">
+                        <h3>Preço claro</h3>
+                        <p>Simule o total antes de reservar, com desconto para períodos longos.</p>
+                    </article>
+                    <article class="beneficio">
+                        <h3>Ajuda na estrada</h3>
+                        <p>Dicas de recarga e de abastecimento para cada trajeto.</p>
+                    </article>
+                    <article class="beneficio">
+                        <h3>Frota variada</h3>
+                        <p>Hatch, sedan, SUV e picape para cada necessidade.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <section class="chamada">
+            <div class="conteiner">
+                <h2 id="saudacao">Que veículo vamos reservar hoje?</h2>
+                <p>Escolha o modelo, informe os dias e confirme sua reserva em menos de um minuto.</p>
+                <a class="botao" href="reserva.html">Reservar agora</a>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

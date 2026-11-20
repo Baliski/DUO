@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: sobre.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: História, missão e visão da DuoDrive
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="História, missão e visão da DuoDrive">
+    <title>Sobre nós | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        #historia {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .marco {
+            flex: 1 1 200px;
+            padding: 1rem;
+            border-top: 5px solid var(--cor-marinho);
+            background-color: var(--cor-papel);
+        }
+
+        .marco strong {
+            font-size: 1.4rem;
+            color: var(--cor-gasolina);
+        }
+
+        .marco p {
+            margin: 0.3rem 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span>DuoDrive</span>
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="sub">
+                        <a href="frota.html">Frota</a>
+                        <ul class="submenu">
+                            <li><a href="frota.html">Todos os veículos</a></li>
+                            <li><a href="eletricos.html">Elétricos</a></li>
+                            <li><a href="gasolina.html">Gasolina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="sub">
+                        <a href="sobre.html" class="ativo">Mais</a>
+                        <ul class="submenu">
+                            <li><a href="sobre.html" class="ativo">Sobre nós</a></li>
+                            <li><a href="midia.html">Mídia</a></li>
+                            <li><a href="faq.html">Perguntas frequentes</a></li>
+                            <li><a href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                            <li><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            <li><a href="https://github.com/Baliski/DUO" target="_blank" rel="noopener noreferrer">GitHub (projeto)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="conteiner">
+            <section class="secao">
+                <h1>Sobre a DuoDrive</h1>
+                <p>A DuoDrive é uma locadora fictícia criada para este projeto acadêmico. A ideia é simples: deixar o cliente escolher entre um veículo elétrico e um a gasolina de acordo com o trajeto, sem complicação.</p>
+            </section>
+            <section class="secao" aria-labelledby="titulo-historia">
+                <h2 id="titulo-historia">Nossa história (fictícia)</h2>
+                <div id="historia">
+                    <article class="marco">
+                        <strong>2020</strong>
+                        <p>Fundação em Curitiba, com dez carros a gasolina.</p>
+                    </article>
+                    <article class="marco">
+                        <strong>2022</strong>
+                        <p>Chegada dos primeiros elétricos e dos pontos de recarga.</p>
+                    </article>
+                    <article class="marco">
+                        <strong>2024</strong>
+                        <p>Reserva 100% online e metade da frota elétrica.</p>
+                    </article>
+                    <article class="marco">
+                        <strong>2026</strong>
+                        <p>Novo site responsivo, com simulador de custos.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="secao">
+                <h2>Missão, visão e valores</h2>
+                <div class="beneficios">
+                    <article class="beneficio">
+                        <h3>Missão</h3>
+                        <p>Facilitar o aluguel de veículos, comparando de forma honesta o custo de elétricos e de carros a gasolina.</p>
+                    </article>
+                    <article class="beneficio">
+                        <h3>Visão</h3>
+                        <p>Ser a locadora preferida de quem quer testar a mobilidade elétrica sem abrir mão da praticidade.</p>
+                    </article>
+                    <article class="beneficio">
+                        <h3>Valores</h3>
+                        <p>Transparência nos preços, cuidado com o cliente e respeito ao meio ambiente.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="secao">
+                <h2>Sobre este site</h2>
+                <p>O projeto foi desenvolvido na disciplina de Desenvolvimento Front-End para Web com HTML5, CSS3, JavaScript e Bootstrap. As páginas Início, Contato, Sobre nós, Mídia e Perguntas frequentes usam apenas HTML, CSS e JavaScript puros.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+    Arquivo: simulador.html
+    Projeto: DuoDrive - aluguel de veículos elétricos e a gasolina
+    Disciplina: Desenvolvimento Front-End para Web
+    Descrição: Simulador de custo do aluguel de veículos elétricos e a gasolina
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador de custo do aluguel de veículos elétricos e a gasolina">
+    <title>Simulador | DuoDrive</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="img/logo.svg" alt="" width="40" height="40">
+                    <span>DuoDrive</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-bs" aria-controls="menu-bs" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-bs">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Frota</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="frota.html">Todos os veículos</a></li>
+                                <li><a class="dropdown-item" href="eletricos.html">Elétricos</a></li>
+                                <li><a class="dropdown-item" href="gasolina.html">Gasolina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="simulador.html">Simulador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sobre.html">Sobre nós</a></li>
+                                <li><a class="dropdown-item" href="midia.html">Mídia</a></li>
+                                <li><a class="dropdown-item" href="faq.html">Perguntas frequentes</a></li>
+                                <li><a class="dropdown-item" href="https://abve.org.br" target="_blank" rel="noopener noreferrer">ABVE (site externo)</a></li>
+                                <li><a class="dropdown-item" href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener noreferrer">ANP (site externo)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-5">
+            <h1 class="mb-2">Simulador de aluguel</h1>
+            <p class="lead">Informe o veículo e o período para ver o custo total estimado, incluindo recarga ou combustível.</p>
+            <form id="form-simulador" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="veiculo">Veículo</label>
+                    <select class="form-select" id="veiculo" name="veiculo" required>
+                        <option value="">Selecione um veículo</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label" for="dias">Dias de aluguel</label>
+                    <input class="form-control" type="number" id="dias" name="dias" placeholder="Ex.: 5" min="1" max="90" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label" for="km">Km por dia</label>
+                    <input class="form-control" type="number" id="km" name="km" placeholder="Ex.: 100" min="0" max="800" required>
+                </div>
+                <fieldset class="col-12">
+                    <legend class="fs-6 fw-semibold">Adicionais (valor por dia)</legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="seguro" name="adicionais" value="seguro">
+                        <label class="form-check-label" for="seguro">Seguro total, R$ 25</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="cadeirinha" name="adicionais" value="cadeirinha">
+                        <label class="form-check-label" for="cadeirinha">Cadeirinha infantil, R$ 10</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="gps" name="adicionais" value="gps">
+                        <label class="form-check-label" for="gps">Navegador GPS, R$ 8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="motorista" name="adicionais" value="motorista">
+                        <label class="form-check-label" for="motorista">Motorista adicional, R$ 20</label>
+                    </div>
+                </fieldset>
+                <div class="col-12 d-flex flex-wrap gap-2">
+                    <button class="btn btn-eletrico" type="submit">Calcular custo</button>
+                    <button class="btn btn-outline-marinho" type="reset">Limpar</button>
+                </div>
+            </form>
+            <div id="resultado" class="mt-4" aria-live="polite"></div>
+            <p class="text-secondary mt-4">Estimativa didática: elétricos R$ 0,14 por km e gasolina R$ 0,52 por km. Descontos de 10% a partir de 7 dias e de 20% a partir de 30 dias.</p>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner rodape-grade">
+            <div>
+                <h2>DuoDrive</h2>
+                <p>Locadora fictícia de veículos elétricos e a gasolina, criada como projeto acadêmico.</p>
+            </div>
+            <nav aria-label="Mapa do site">
+                <h2>Páginas do site</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="frota.html">Frota</a></li>
+                    <li><a href="eletricos.html">Elétricos</a></li>
+                    <li><a href="gasolina.html">Gasolina</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <address>
+                <h2>Contato</h2>
+                Rua das Palmeiras, 1000<br>
+                Curitiba, Paraná<br>
+                (41) 4000-0000<br>
+                contato@duodrive.example
+            </address>
+        </div>
+        <p class="rodape-fim">© 2026 DuoDrive. Projeto acadêmico de Desenvolvimento Front-End para Web, site fictício.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dados.js"></script>
+    <script src="js/simulador.js"></script>
+</body>
+</html>
